@@ -25,5 +25,26 @@ public class Stack {
 			stackArray[++top] = x;
 		}
 	}
-
+	
+	public double pop() {
+		if(top == -1) {
+			System.out.println("Satack is Empty");
+		}
+		return stackArray[top--];
+	}
+	
+	public double peek() {
+		if(top == -1) {
+			System.out.println("Empty Stack");
+		}
+		return stackArray[top];
+	}
+	
+	public boolean isEmpty() {
+		return top == -1;
+	}
+	
+	public boolean isFull() {
+		return top == maxSize - 1;
+	}
 }
